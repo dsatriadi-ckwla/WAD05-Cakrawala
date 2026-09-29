@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Sistem Pencarian Data Tenant — Gaya JIEP</title>
+<style>
+  body { font-family: Georgia, 'Times New Roman', serif; max-width: 640px; margin: 40px auto; color: #1a1a1a; }
+  h1 { font-size: 20px; border-bottom: 2px solid #14532d; padding-bottom: 8px; }
+  #kolomPencarian { width: 100%; padding: 8px; font-size: 15px; box-sizing: border-box; margin-bottom: 16px; }
+  #daftarHasil { list-style: none; padding: 0; }
+  #daftarHasil li { padding: 8px 12px; border-bottom: 1px solid #ddd; }
+  #keteranganJumlah { color: #555; font-size: 13px; margin-bottom: 8px; }
+</style>
+</head>
+<body>
+
+<h1>Sistem Pencarian Data Tenant Kawasan Industri</h1>
+<p>Fitur berikut disediakan guna mempermudah proses pencarian data tenant secara langsung (<em>real-time</em>) berdasarkan kata kunci yang dimasukkan pengguna.</p>
+
+<input type="text" id="kolomPencarian" placeholder="Masukkan kata kunci pencarian...">
+<p id="keteranganJumlah"></p>
+<ul id="daftarHasil"></ul>
+
+<script>
+  // Data sumber utama. Dalam penerapan produksi, data ini diperoleh dari basis data tenant.
+  const dataSumberTenant = [
+    "PT Sumber Makmur Sejahtera",
+    "PT Cipta Karya Industri",
+    "PT Nusantara Logistik Terpadu",
+    "PT Anugerah Pratama Mandiri",
+    "PT Karya Utama Perkasa",
+    "PT Bumi Sentosa Abadi",
+    "PT Graha Mitra Industri",
+    "PT Sinar Cahaya Teknik",
+    "PT Wahana Sukses Bersama",
+    "PT Delta Prima Manufaktur"
+  ];
+
+  const elemenInput = document.querySelector("#kolomPencarian");
+  const elemenDaftarHasil = document.querySelector("#daftarHasil");
+  const elemenKeterangan = document.querySelector("#keteranganJumlah");
+
+  // Fungsi ini bertugas mengosongkan daftar hasil sebelum dilakukan pengisian ulang.
+  // Penghapusan dilakukan melalui removeChild, bukan melalui innerHTML, sesuai ketentuan.
+  function kosongkanDaftarHasil() {
+    while (elemenDaftarHasil.firstChild) {
+      elemenDaftarHasil.removeChild(elemenDaftarHasil.firstChild);
+    }
+  }
+
+  // Fungsi ini bertugas menyusun ulang (re-render) daftar hasil berdasarkan data yang diterima.
+  // Setiap baris dibentuk melalui createElement dan textContent, guna mencegah risiko
+  // Cross-Site Scripting (XSS) sebagaimana dijelaskan pada Soal 2.
+  function tampilkanDaftarHasil(dataYangDitampilkan) {
+    kosongkanDaftarHasil();
+    dataYangDitampilkan.forEach((namaTenant) => {
+      const elemenBaris = document.createElement("li");
+      elemenBaris.textContent = namaTenant;
+      elemenDaftarHasil.appendChild(elemenBaris);
+    });
+    elemenKeterangan.textContent = "Ditemukan " + dataYangDitampilkan.length + " dari " + dataSumberTenant.length + " data.";
+  }
+
+  // Proses penyaringan dilakukan setiap kali pengguna mengetik pada kolom pencarian (event "input"),
+  // sehingga hasil dapat diperbarui secara langsung tanpa memerlukan aksi tambahan dari pengguna.
+  elemenInput.addEventListener("input", (peristiwa) => {
+    const kataKunci = peristiwa.target.value.trim().toLowerCase();
+    const hasilPenyaringan = dataSumberTenant.filter((namaTenant) => {
+      return namaTenant.toLowerCase().includes(kataKunci);
+    });
+    tampilkanDaftarHasil(hasilPenyaringan);
+  });
+
+  // Tampilan awal menampilkan seluruh data sebelum pengguna melakukan pencarian.
+  tampilkanDaftarHasil(dataSumberTenant);
+</script>
+
+</body>
+</html>
