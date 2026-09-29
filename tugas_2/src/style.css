@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #222;
+}
+
+header {
+  background: #14532d;
+  color: #fff;
+  padding: 16px 20px;
+}
+
+header h1 {
+  margin: 0 0 4px;
+  font-size: 22px;
+}
+
+header p {
+  margin: 0;
+  font-size: 14px;
+}
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 16px 20px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-end;
+  margin-bottom: 16px;
+}
+
+.cari {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cari label {
+  font-size: 13px;
+}
+
+.cari input {
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+button {
+  padding: 8px 12px;
+  border: 1px solid #14532d;
+  background: #fff;
+  color: #14532d;
+  border-radius: 4px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button.aktif {
+  background: #14532d;
+  color: #fff;
+}
+
+.urutan {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.daftar {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.daftar li {
+  margin-bottom: 12px;
+}
+
+.kartu {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 12px;
+}
+
+.kartu h2 {
+  margin: 0 0 4px;
+  font-size: 18px;
+}
+
+.username {
+  margin: 0 0 4px;
+  color: #555;
+  font-size: 14px;
+}
+
+.email {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.detail {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.detail p {
+  margin: 2px 0;
+}
