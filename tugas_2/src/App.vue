@@ -26,7 +26,7 @@ async function muatPengguna() {
         ...u,
         name: nama,
         username: nama.toLowerCase().replace(/\s+/g, ''),
-        email: 'dharma@example.com'
+        email: 'dharma@jiep.co.id'
       }
     })
     keadaan.value = users.value.length === 0 ? 'empty' : 'success'
