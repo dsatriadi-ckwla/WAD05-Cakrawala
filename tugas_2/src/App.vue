@@ -22,11 +22,12 @@ async function muatPengguna() {
     const data = await response.json()
     users.value = data.map((u, i) => {
       const nama = namaIndonesia[i] || `Pengguna ${i + 1}`
+      const username = nama.toLowerCase().replace(/\s+/g, '')
       return {
         ...u,
         name: nama,
-        username: nama.toLowerCase().replace(/\s+/g, ''),
-        email: 'dharma@jiep.co.id'
+        username,
+        email: `${username}@jiep.co.id`
       }
     })
     keadaan.value = users.value.length === 0 ? 'empty' : 'success'

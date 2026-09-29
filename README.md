@@ -18,7 +18,7 @@ npm install
 npm run dev
 ```
 
-Klik **Muat Pengguna** untuk mengambil data dari JSONPlaceholder. Cari berdasarkan username, misalnya `agussetiawan`. Semua pengguna memakai nama Indonesia dan email `dharma@jiep.co.id`.
+Klik **Muat Pengguna** untuk mengambil data dari JSONPlaceholder. Cari berdasarkan username, misalnya `agussetiawan`. Email mengikuti username dengan domain `@jiep.co.id`, misalnya `agussetiawan@jiep.co.id`.
 
 Tombol **Lihat Detail** menampilkan telepon, perusahaan, dan kota. Tombol **Urutkan A-Z** dan **Urutkan Z-A** mengurutkan hasil pencarian berdasarkan nama.
 
