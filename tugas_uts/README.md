@@ -1,6 +1,6 @@
-# Dashboard Inventaris Klinik Bedah Plastik Estetika
+# Dashboard Inventaris Klinik Nisari
 
-Tugas UTS Dharma Satriadi (25120300030). Data barang merupakan contoh simulasi, bukan stok resmi perusahaan.
+Tugas UTS Dharma Satriadi (25120300030) bertema klinik bedah plastik estetika. Data barang merupakan contoh simulasi, bukan stok resmi Klinik Nisari.
 
 ## Menjalankan
 

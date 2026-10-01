@@ -17,7 +17,7 @@ class Barang(BarangInput):
     id: int
 
 
-app = FastAPI(title="Inventaris Klinik Bedah Plastik Estetika", version="1.0.0")
+app = FastAPI(title="Inventaris Klinik Nisari", version="1.0.0")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5174", "http://127.0.0.1:5174"],

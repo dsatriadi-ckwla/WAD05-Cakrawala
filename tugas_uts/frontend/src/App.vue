@@ -110,7 +110,7 @@ onMounted(muatBarang)
     <header class="topbar">
       <div class="topbar-inner">
         <span class="brand-mark" aria-hidden="true">+</span>
-        <span class="brand-name">Klinik Bedah Plastik &amp; Estetika</span>
+        <span class="brand-name">Nisari</span>
         <span class="topbar-label">Inventaris klinik · DS</span>
       </div>
     </header>
@@ -118,8 +118,8 @@ onMounted(muatBarang)
     <main class="container">
       <div class="page-heading">
         <div>
-          <p class="eyebrow">INVENTARIS KLINIK · DATA SIMULASI</p>
-          <h1>Persediaan klinik</h1>
+          <p class="eyebrow">KLINIK BEDAH PLASTIK &amp; ESTETIKA · DATA SIMULASI</p>
+          <h1>Persediaan Klinik Nisari</h1>
           <p class="intro">Perlengkapan konsultasi, tindakan, sterilisasi, dan perawatan pascatindakan.</p>
         </div>
         <button class="primary-button heading-action" type="button" @click="formulirTerbuka = !formulirTerbuka">
