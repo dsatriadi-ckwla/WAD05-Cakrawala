@@ -9,6 +9,7 @@ Tugas Web Application Development, Universitas Cakrawala.
 
 - `tugas_1`: dokumen jawaban dan live search tugas pertama. Buka berkas HTML langsung di browser.
 - `tugas_2`: dashboard Vue 3 dengan detail pengguna dan pengurutan nama.
+- `tugas_uts`: dashboard inventaris Vue 3 dan FastAPI. Cara menjalankan ada di `tugas_uts/README.md`.
 
 ## Menjalankan tugas kedua
 
