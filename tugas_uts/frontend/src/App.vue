@@ -109,18 +109,18 @@ onMounted(muatBarang)
   <div class="app-shell">
     <header class="topbar">
       <div class="topbar-inner">
-        <span class="brand-mark" aria-hidden="true">DS</span>
-        <span class="brand-name">Inventaris Klinik Estetika</span>
-        <span class="topbar-label">Dashboard UTS</span>
+        <span class="brand-mark" aria-hidden="true">+</span>
+        <span class="brand-name">Klinik Bedah Plastik &amp; Estetika</span>
+        <span class="topbar-label">Inventaris klinik · DS</span>
       </div>
     </header>
 
     <main class="container">
       <div class="page-heading">
         <div>
-          <p class="eyebrow">SIMULASI DATA · DHARMA SATRIADI</p>
-          <h1>Stok klinik bedah plastik estetika</h1>
-          <p class="intro">Pantau perlengkapan konsultasi, tindakan, dan perawatan pascatindakan.</p>
+          <p class="eyebrow">INVENTARIS KLINIK · DATA SIMULASI</p>
+          <h1>Persediaan klinik</h1>
+          <p class="intro">Perlengkapan konsultasi, tindakan, sterilisasi, dan perawatan pascatindakan.</p>
         </div>
         <button class="primary-button heading-action" type="button" @click="formulirTerbuka = !formulirTerbuka">
           {{ formulirTerbuka ? 'Tutup formulir' : '+ Tambah barang' }}
@@ -129,7 +129,7 @@ onMounted(muatBarang)
 
       <section class="stats" aria-label="Ringkasan inventaris">
         <div class="stat"><span>Total barang</span><strong>{{ totalBarang }}</strong><small>jenis barang</small></div>
-        <div class="stat stat-alert"><span>Perlu perhatian</span><strong>{{ perluPerhatian }}</strong><small>menipis atau habis</small></div>
+        <div class="stat stat-alert"><span>Perlu restok</span><strong>{{ perluPerhatian }}</strong><small>Menipis + Habis</small></div>
         <div class="stat"><span>Kategori</span><strong>{{ jumlahKategori }}</strong><small>kelompok barang</small></div>
         <div class="stat"><span>Total unit</span><strong>{{ totalUnit }}</strong><small>seluruh stok</small></div>
       </section>
@@ -137,15 +137,15 @@ onMounted(muatBarang)
       <section v-if="formulirTerbuka" class="panel form-panel" aria-labelledby="form-title">
         <div class="section-heading">
           <div>
-            <h2 id="form-title">Tambah barang</h2>
-            <p>Isi data barang yang akan masuk daftar.</p>
+            <h2 id="form-title">Catat barang baru</h2>
+            <p>Masukkan jumlah stok dan lokasi penyimpanannya.</p>
           </div>
         </div>
         <form class="barang-form" @submit.prevent="tambahBarang">
           <label>Nama barang<input v-model.trim="form.nama" type="text" maxlength="100" required placeholder="Contoh: Kasa steril" /></label>
           <label>Kategori<input v-model.trim="form.kategori" type="text" maxlength="60" required placeholder="Contoh: Tindakan" /></label>
           <label>Jumlah stok<input v-model.number="form.jumlah_stok" type="number" min="0" step="1" required /></label>
-          <label>Lokasi gudang<input v-model.trim="form.lokasi_gudang" type="text" maxlength="100" required placeholder="Contoh: Gudang Klinik" /></label>
+          <label>Lokasi penyimpanan<input v-model.trim="form.lokasi_gudang" type="text" maxlength="100" required placeholder="Contoh: Lemari Tindakan" /></label>
           <div class="form-actions"><button class="primary-button" type="submit" :disabled="menyimpan">{{ menyimpan ? 'Menyimpan…' : 'Simpan barang' }}</button></div>
         </form>
       </section>
@@ -156,8 +156,8 @@ onMounted(muatBarang)
       <section class="panel list-panel" aria-labelledby="list-title">
         <div class="section-heading list-heading">
           <div>
-            <h2 id="list-title">Daftar barang</h2>
-            <p>Data contoh untuk tugas UTS, bukan catatan stok resmi.</p>
+            <h2 id="list-title">Daftar perlengkapan</h2>
+            <p>Data simulasi untuk demonstrasi dashboard.</p>
           </div>
           <span class="count">{{ hasilPencarian.length }} dari {{ totalBarang }} barang</span>
         </div>
@@ -177,7 +177,7 @@ onMounted(muatBarang)
         <div v-else-if="barangTerurut.length === 0" class="state">{{ pencarian ? 'Tidak ada barang yang cocok dengan pencarian.' : 'Belum ada barang.' }}</div>
         <div v-else class="table-scroll">
           <table>
-            <thead><tr><th scope="col">Nama barang</th><th scope="col">Kategori</th><th scope="col">Lokasi gudang</th><th scope="col">Stok</th><th scope="col">Status</th><th scope="col">Tindakan</th></tr></thead>
+            <thead><tr><th scope="col">Nama barang</th><th scope="col">Kategori</th><th scope="col">Lokasi simpan</th><th scope="col">Stok</th><th scope="col">Status stok</th><th scope="col">Tindakan</th></tr></thead>
             <tbody>
               <tr v-for="item in barangTerurut" :key="item.id">
                 <td class="item-name">{{ item.nama }}</td>
@@ -198,7 +198,7 @@ onMounted(muatBarang)
           </table>
         </div>
       </section>
-      <p class="footer-note">Ambang stok: 0 habis · 1–5 menipis · lebih dari 5 aman</p>
+      <p class="footer-note">Status stok: 0 Habis · 1–5 Menipis · lebih dari 5 Aman</p>
     </main>
   </div>
 </template>
