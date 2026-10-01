@@ -198,7 +198,7 @@ onMounted(muatBarang)
           </table>
         </div>
       </section>
-      <p class="footer-note">Status stok: 0 Habis · 1–5 Menipis · lebih dari 5 Aman</p>
+      <p class="footer-note">Aman = stok cukup (&gt;5 unit) · Menipis = perlu restok (1–5 unit) · Habis = 0 unit</p>
     </main>
   </div>
 </template>
