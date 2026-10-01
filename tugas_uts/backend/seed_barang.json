@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "nama": "Kamera dokumentasi klinis",
+    "kategori": "Konsultasi",
+    "jumlah_stok": 2,
+    "lokasi_gudang": "Lemari Konsultasi"
+  },
+  {
+    "id": 2,
+    "nama": "Lampu pemeriksaan",
+    "kategori": "Konsultasi",
+    "jumlah_stok": 3,
+    "lokasi_gudang": "Ruang Konsultasi"
+  },
+  {
+    "id": 3,
+    "nama": "Spidol penanda kulit",
+    "kategori": "Konsultasi",
+    "jumlah_stok": 12,
+    "lokasi_gudang": "Lemari Konsultasi"
+  },
+  {
+    "id": 4,
+    "nama": "Penggaris wajah",
+    "kategori": "Konsultasi",
+    "jumlah_stok": 4,
+    "lokasi_gudang": "Lemari Konsultasi"
+  },
+  {
+    "id": 5,
+    "nama": "Set instrumen bedah minor",
+    "kategori": "Tindakan",
+    "jumlah_stok": 6,
+    "lokasi_gudang": "Lemari Instrumen"
+  },
+  {
+    "id": 6,
+    "nama": "Gunting bedah",
+    "kategori": "Tindakan",
+    "jumlah_stok": 8,
+    "lokasi_gudang": "Lemari Instrumen"
+  },
+  {
+    "id": 7,
+    "nama": "Pinset bedah",
+    "kategori": "Tindakan",
+    "jumlah_stok": 10,
+    "lokasi_gudang": "Lemari Instrumen"
+  },
+  {
+    "id": 8,
+    "nama": "Benang jahit bedah",
+    "kategori": "Tindakan",
+    "jumlah_stok": 20,
+    "lokasi_gudang": "Lemari Tindakan"
+  },
+  {
+    "id": 9,
+    "nama": "Kasa steril",
+    "kategori": "Tindakan",
+    "jumlah_stok": 30,
+    "lokasi_gudang": "Lemari Tindakan"
+  },
+  {
+    "id": 10,
+    "nama": "Duk steril",
+    "kategori": "Tindakan",
+    "jumlah_stok": 9,
+    "lokasi_gudang": "Lemari Tindakan"
+  },
+  {
+    "id": 11,
+    "nama": "Pouch sterilisasi",
+    "kategori": "Sterilisasi",
+    "jumlah_stok": 16,
+    "lokasi_gudang": "Ruang Sterilisasi"
+  },
+  {
+    "id": 12,
+    "nama": "Indikator sterilisasi",
+    "kategori": "Sterilisasi",
+    "jumlah_stok": 5,
+    "lokasi_gudang": "Ruang Sterilisasi"
+  },
+  {
+    "id": 13,
+    "nama": "Baki instrumen",
+    "kategori": "Sterilisasi",
+    "jumlah_stok": 7,
+    "lokasi_gudang": "Ruang Sterilisasi"
+  },
+  {
+    "id": 14,
+    "nama": "Disinfektan permukaan",
+    "kategori": "Sterilisasi",
+    "jumlah_stok": 3,
+    "lokasi_gudang": "Ruang Sterilisasi"
+  },
+  {
+    "id": 15,
+    "nama": "Sarung tangan steril",
+    "kategori": "APD",
+    "jumlah_stok": 24,
+    "lokasi_gudang": "Gudang Klinik"
+  },
+  {
+    "id": 16,
+    "nama": "Masker medis",
+    "kategori": "APD",
+    "jumlah_stok": 40,
+    "lokasi_gudang": "Gudang Klinik"
+  },
+  {
+    "id": 17,
+    "nama": "Pelindung wajah",
+    "kategori": "APD",
+    "jumlah_stok": 0,
+    "lokasi_gudang": "Gudang Klinik"
+  },
+  {
+    "id": 18,
+    "nama": "Perban elastis",
+    "kategori": "Pascatindakan",
+    "jumlah_stok": 13,
+    "lokasi_gudang": "Lemari Pemulihan"
+  },
+  {
+    "id": 19,
+    "nama": "Plester luka",
+    "kategori": "Pascatindakan",
+    "jumlah_stok": 25,
+    "lokasi_gudang": "Lemari Pemulihan"
+  },
+  {
+    "id": 20,
+    "nama": "Kompres dingin",
+    "kategori": "Pascatindakan",
+    "jumlah_stok": 2,
+    "lokasi_gudang": "Lemari Pemulihan"
+  }
+]
